@@ -1,1 +1,1 @@
-### This is a Maturity Model for NIST AI RMF
+### This is a Maturity Model NIST Artificial Intelligence Risk Assessment Framework (AI RMF)
