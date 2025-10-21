@@ -1,0 +1,22 @@
+# web interface 
+streamlit  
+
+# LLM and RAG 
+transformers 
+langchain
+langchain-ollama
+langchain-chroma 
+
+# document parsing and embedding 
+sentence-transformers
+
+# for basic transformations
+pandas
+numpy
+
+# authentication 
+streamlit-authenticator
+# testing 
+pytest
+
+-e .
