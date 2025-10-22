@@ -1,12 +1,10 @@
 """
-Extract NIST AI RMF actions (GOVERN / MAP / MEASURE / MANAGE) from a PDF and save to CSV.
+This code extracts NIST AI RMF actions (GOVERN / MAP / MEASURE / MANAGE) from a PDF and save to CSV.
 
-- Captures entries like: "GOVERN 1.1: Legal and regulatory requirements ...".
-- Grabs multi-line descriptions until the next action header.
-- Normalizes whitespace for clean rows.
+- Captures sentences like: "GOVERN 1.1: Legal and regulatory requirements ...".
+- Grabs descriptions until the next action header (eg. "GOVERN 1.2 ...").
+- removes whitespace for clean rows.
 
-Dependencies:
-  pip install pypdf
 """
 
 from pathlib import Path
@@ -93,7 +91,6 @@ def main(pdf_path: Path = PDF_PATH, csv_path: Path = CSV_PATH):
     if not rows:
         raise RuntimeError(
             "No actions were extracted. Verify the PDF text and the header format "
-            "(e.g., 'GOVERN 1.1: ...') and adjust HEADER_REGEX if needed."
         )
 
     write_csv(rows, csv_path)

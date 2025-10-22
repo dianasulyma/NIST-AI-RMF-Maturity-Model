@@ -7,9 +7,12 @@ langchain
 langchain-ollama
 langchain-chroma 
 
-# document parsing and embedding 
+# document parsing 
 sentence-transformers
 pypdf
+re 
+csv
+pathlib
 
 # for basic transformations
 pandas
