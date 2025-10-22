@@ -9,6 +9,7 @@ langchain-chroma
 
 # document parsing and embedding 
 sentence-transformers
+pypdf
 
 # for basic transformations
 pandas
